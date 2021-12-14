@@ -4,14 +4,16 @@ on:
     branches:
       - master
       - main
-      - mkdocs
+      - gh_pages
+      - product_description
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: ruby/setup-ruby@v1
         with:
-          python-version: 3.x
-      - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+          ruby-version: 2.6
+      - run: gem install bundler
+      - run: cd docs && bundle install
+      - run: cd docs && bundle exec jekyll build
