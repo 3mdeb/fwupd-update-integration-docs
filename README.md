@@ -8,21 +8,23 @@ webpage
 ## Environment setup
 
 ```bash
-$ virtualenv -p $(which python3) venv
-$ source venv/bin/activate
-$(venv) pip install mkdocs mkdocs-material pymdown-extensions
+$ sudo apt-get install ruby-full
+$ gem install bundler
+$ cd docs && bundle install
 ```
 
 ## Build
 
 ```bash
-$(venv) mkdocs build
+$ cd docs
+$ cd bundle exec jekyll build
 ```
 
 ## Preview
 
 ```bash
-$(venv) mkdocs serve
+$ cd docs
+$ cd bundle exec jekyll serve
 ```
 
 # Contribution
