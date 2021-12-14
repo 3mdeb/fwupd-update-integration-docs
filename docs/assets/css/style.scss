@@ -1,0 +1,62 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.container404 {
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #252525;
+  color: #F5F5F5;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+}
+blockquote {
+  color: #F5F5F5;
+  padding-left: 10px;
+  border-left: 1px dotted $blockquote-border;
+}
+header {
+  background: rgba(44, 40, 40, 0.1);
+  width: 100%;
+  border-bottom: 1px dashed #38D430; //header;
+  padding: 20px 0;
+  margin: 0 0 40px 0;
+}
+header h1 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 0 0 0 -40px;
+  font-weight: bold;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #38D430;//$header;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+               0 0 5px rgba(181, 232, 83, 0.1),
+               0 0 10px rgba(181, 232, 83, 0.1);
+  letter-spacing: -1px;
+  -webkit-font-smoothing: antialiased;
+  @include media-max-width($container-max-width) {
+    margin-left: 0;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #38D430;
+  letter-spacing: -0.03em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+               0 0 5px rgba(181, 232, 83, 0.1),
+               0 0 10px rgba(181, 232, 83, 0.1);
+}
+header h2 {
+  color: #F5F5F5;
+}
+#downloads {
+  display: none;
+}
